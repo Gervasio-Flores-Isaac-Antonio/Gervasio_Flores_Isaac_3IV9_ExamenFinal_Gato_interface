@@ -10,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-public class GatoApp extends javax.swing.JFrame {
+public class JuegoGato extends javax.swing.JFrame {
 
     private int turn=2;
     private int usarboton[]={0,0,0,0,0,0,0,0,0};
@@ -18,10 +18,10 @@ public class GatoApp extends javax.swing.JFrame {
     private int jugador2gano[]={0,0,0,0,0,0,0,0,0};
     private static int puntosJugador1=0;
     private static int puntosJugador2=0;
-    private static String puntaje1="0";
-    private static String puntaje2="0";
-    private Usuario usuario;
-    private Usuario usuario2;
+    private static String punto1="0";
+    private static String punto2="0";
+    private Usuario us1;
+    private Usuario us2;
     
     
     
@@ -84,7 +84,7 @@ public class GatoApp extends javax.swing.JFrame {
                 return 0;
     }
     
-    public GatoApp() {
+    public JuegoGato() {
          initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -380,7 +380,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[0]=1;
             jugador1gano[0]=1;
             
-            revisa();
+            gana();
 
         }else{
             turn++;
@@ -388,12 +388,12 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[0]=1;
             jugador2gano[0]=1;
             
-            revisa();
+            gana();
 
             
         }
        }else{
-           JOptionPane.showMessageDialog(rootPane, "este boton ya esta usado");
+           JOptionPane.showMessageDialog(rootPane, "boton usado");
        }
        
     }//GEN-LAST:event_Boton1ActionPerformed
@@ -407,15 +407,8 @@ public class GatoApp extends javax.swing.JFrame {
              usarboton[1]=1;
             jugador1gano[1]=1;
             
-            revisa();
-//            int resultado1=jugador1gano();
-//            int resultado2=jugador2gano();
-//            
-//            if(resultado1==1){
-//                JOptionPane.showMessageDialog(rootPane, "*****tu has ganado. felicitaciones*****");
-//            }else if(resultado2==1){
-//                JOptionPane.showMessageDialog(rootPane, "*****JAJAJAJAJAJAJAJA.....mala suerte. ha ganado la maquina*****");
-//            }
+            gana();
+
             
         }else{
             turn++;
@@ -423,19 +416,12 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[1]=1;
             jugador2gano[1]=1;
             
-            revisa();
-//            int resultado1=jugador1gano();
-//            int resultado2=jugador2gano();
-//            
-//            if(resultado1==1){
-//                JOptionPane.showMessageDialog(rootPane, "*****tu has ganado. felicitaciones*****");
-//            }else if(resultado2==1){
-//                JOptionPane.showMessageDialog(rootPane, "*****JAJAJAJAJAJAJAJA.....mala suerte. ha ganado la maquina*****");
-//            }
+            gana();
+
         }
             
        }else{
-           JOptionPane.showMessageDialog(rootPane, "este boton ya esta usado");
+           JOptionPane.showMessageDialog(rootPane, "boton usado");
        }
     }//GEN-LAST:event_Boton2ActionPerformed
 
@@ -448,7 +434,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[2]=1;
             jugador1gano[2]=1;
             
-            revisa();
+            gana();
 //            int resultado1=jugador1gano();
 //            int resultado2=jugador2gano();
 //            
@@ -463,18 +449,11 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[2]=1;
             jugador2gano[2]=1;
             
-            revisa();
-//            int resultado1=jugador1gano();
-//            int resultado2=jugador2gano();
-//            
-//            if(resultado1==1){
-//                JOptionPane.showMessageDialog(rootPane, "*****tu has ganado. felicitaciones*****");
-//            }else if(resultado2==1){
-//                JOptionPane.showMessageDialog(rootPane, "*****JAJAJAJAJAJAJAJA.....mala suerte. ha ganado la maquina*****");
-//            }
+            gana();
+
         }
        }else{
-           JOptionPane.showMessageDialog(rootPane, "este boton ya esta usado");
+           JOptionPane.showMessageDialog(rootPane, " boton usado");
        }
         
     }//GEN-LAST:event_Boton3ActionPerformed
@@ -488,7 +467,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[3]=1;
             jugador1gano[3]=1;
             
-            revisa();
+            gana();
 //            int resultado1=jugador1gano();
 //            int resultado2=jugador2gano();
 //            
@@ -503,7 +482,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[3]=1;
             jugador2gano[3]=1;
             
-            revisa();
+            gana();
 //            int resultado1=jugador1gano();
 //            int resultado2=jugador2gano();
 //            
@@ -514,7 +493,7 @@ public class GatoApp extends javax.swing.JFrame {
 //            }
         }
        }else{
-           JOptionPane.showMessageDialog(rootPane, "este boton ya esta usado");
+           JOptionPane.showMessageDialog(rootPane, "boton usado");
        }
     }//GEN-LAST:event_Boton4ActionPerformed
 
@@ -527,7 +506,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[4]=1;
             jugador1gano[4]=1;
             
-            revisa();
+            gana();
 //            int resultado1=jugador1gano();
 //            int resultado2=jugador2gano();
 //            
@@ -542,7 +521,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[4]=1;
             jugador2gano[4]=1;
             
-            revisa();
+            gana();
 //            int resultado1=jugador1gano();
 //            int resultado2=jugador2gano();
 //            
@@ -553,7 +532,7 @@ public class GatoApp extends javax.swing.JFrame {
 //            }
         }
        }else{
-           JOptionPane.showMessageDialog(rootPane, "este boton ya esta usado");
+           JOptionPane.showMessageDialog(rootPane, "boton usado");
        }
     }//GEN-LAST:event_Boton5ActionPerformed
 
@@ -565,7 +544,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[5]=1;
             jugador1gano[5]=1;
             
-            revisa();
+            gana();
 //            int resultado1=jugador1gano();
 //            int resultado2=jugador2gano();
 //            
@@ -580,7 +559,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[5]=1;
             jugador2gano[5]=1;
             
-            revisa();
+            gana();
 //            int resultado1=jugador1gano();
 //            int resultado2=jugador2gano();
 //            
@@ -591,7 +570,7 @@ public class GatoApp extends javax.swing.JFrame {
 //            }
         }
        }else{
-           JOptionPane.showMessageDialog(rootPane, "este boton ya esta usado");
+           JOptionPane.showMessageDialog(rootPane, "boton usado");
        }
     }//GEN-LAST:event_Boton6ActionPerformed
 
@@ -604,7 +583,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[6]=1;
             jugador1gano[6]=1;
             
-            revisa();
+            gana();
 //            int resultado1=jugador1gano();
 //            int resultado2=jugador2gano();
 //            
@@ -619,7 +598,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[6]=1;
             jugador2gano[6]=1;
             
-            revisa();
+            gana();
 //            int resultado1=jugador1gano();
 //            int resultado2=jugador2gano();
 //            
@@ -630,7 +609,7 @@ public class GatoApp extends javax.swing.JFrame {
 //            }
         }
        }else{
-           JOptionPane.showMessageDialog(rootPane, "este boton ya esta usado");
+           JOptionPane.showMessageDialog(rootPane, "boton usado");
        }
     }//GEN-LAST:event_Boton7ActionPerformed
 
@@ -643,7 +622,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[7]=1;
             jugador1gano[7]=1;
             
-            revisa();
+            gana();
 //            int resultado1=jugador1gano();
 //            int resultado2=jugador2gano();
 //            
@@ -658,7 +637,7 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[7]=1;
             jugador2gano[7]=1;
             
-            revisa();
+            gana();
 //            int resultado1=jugador1gano();
 //            int resultado2=jugador2gano();
 //            
@@ -669,7 +648,7 @@ public class GatoApp extends javax.swing.JFrame {
 //            }
         }
        }else{
-           JOptionPane.showMessageDialog(rootPane, "este boton ya esta usado");
+           JOptionPane.showMessageDialog(rootPane, "boton usado");
        }
     }//GEN-LAST:event_Boton8ActionPerformed
 
@@ -682,33 +661,19 @@ public class GatoApp extends javax.swing.JFrame {
             usarboton[8]=1;
             jugador1gano[8]=1;
             
-            revisa();
-//            int resultado1=jugador1gano();
-//            int resultado2=jugador2gano();
-//            
-//            if(resultado1==1){
-//                JOptionPane.showMessageDialog(rootPane, "*****tu has ganado. felicitaciones*****");
-//            }else if(resultado2==1){
-//                JOptionPane.showMessageDialog(rootPane, "*****JAJAJAJAJAJAJAJA.....mala suerte. ha ganado la maquina*****");
-//            }
+            gana();
+
         }else{
             turn++;
             Boton9.setText("O");
             usarboton[8]=1;
             jugador2gano[8]=1;
             
-            revisa();
-//            int resultado1=jugador1gano();
-//            int resultado2=jugador2gano();
-//            
-//            if(resultado1==1){
-//                JOptionPane.showMessageDialog(rootPane, "*****tu has ganado. felicitaciones*****");
-//            }else if(resultado2==1){
-//                JOptionPane.showMessageDialog(rootPane, "*****JAJAJAJAJAJAJAJA.....mala suerte. ha ganado la maquina*****");
-//            }
+            gana();
+
         }
        }else{
-           JOptionPane.showMessageDialog(rootPane, "este boton ya esta usado");
+           JOptionPane.showMessageDialog(rootPane, "boton usado");
        }
     }//GEN-LAST:event_Boton9ActionPerformed
 
@@ -748,18 +713,18 @@ public class GatoApp extends javax.swing.JFrame {
     try {
 
         escribir = new FileWriter(archivo, true);
-        escribir.write(usuario.getNombre());
+        escribir.write(us1.getNombre());
         escribir.write("\n");
-        escribir.write(usuario.getEdad());
+        escribir.write(us1.getEdad());
         escribir.write("\n");
-        escribir.write(usuario.getPuntaje());
+        escribir.write(us1.getPuntaje());
         escribir.write("\n");
         escribir.write("\n");
-        escribir.write(usuario2.getNombre());
+        escribir.write(us2.getNombre());
         escribir.write("\n");
-        escribir.write(usuario2.getEdad());
+        escribir.write(us2.getEdad());
         escribir.write("\n");
-        escribir.write(usuario2.getPuntaje());
+        escribir.write(us2.getPuntaje());
         escribir.write("\n");
         escribir.write("\n");
         escribir.close();
@@ -783,7 +748,7 @@ public class GatoApp extends javax.swing.JFrame {
         jLabel6.setText(nombre);
         jLabel7.setText(edad);
         
-        usuario = new Usuario(nombre,edad, puntaje1);
+        us1 = new Usuario(nombre,edad, punto1);
        
         
         
@@ -799,11 +764,11 @@ public class GatoApp extends javax.swing.JFrame {
         jLabel14.setText(edad);
         
      
-        usuario2 = new Usuario(nombre,edad, puntaje2);
+        us2 = new Usuario(nombre,edad, punto2);
         
     }//GEN-LAST:event_jButton4ActionPerformed
     
-     public void leeArchivo(String archivo) throws FileNotFoundException, IOException {
+     public void read(String archivo) throws FileNotFoundException, IOException {
         System.out.println("muestraContenido");
         String cadena;
       FileReader f = new FileReader(archivo);
@@ -814,18 +779,18 @@ public class GatoApp extends javax.swing.JFrame {
       b.close();
 }
      
-     public void revisa(){
+     public void gana(){
      
      int resultado1=jugador1gano();
             int resultado2=jugador2gano();
             
             if(resultado1==1){
              
-                JOptionPane.showMessageDialog(rootPane, "*****tu has ganado. felicitaciones*****");
+                JOptionPane.showMessageDialog(rootPane, "ha ganado jugador 1");
             
             puntosJugador1++;
 
-            puntaje1 = Integer.toString(puntosJugador1);
+            punto1 = Integer.toString(puntosJugador1);
             
             
             jLabel2.setText(Integer.toString(puntosJugador1));
@@ -833,10 +798,10 @@ public class GatoApp extends javax.swing.JFrame {
             
             
             }else if(resultado2==1){
-                JOptionPane.showMessageDialog(rootPane, "*****JAJAJAJAJAJAJAJA.....mala suerte. ha ganado la maquina*****");
+                JOptionPane.showMessageDialog(rootPane, "ha ganado jugador 2");
             puntosJugador2++;
             
-            puntaje2 = Integer.toString(puntosJugador2);
+            punto2 = Integer.toString(puntosJugador2);
             
             
             jLabel3.setText(Integer.toString(puntosJugador2));
@@ -845,21 +810,6 @@ public class GatoApp extends javax.swing.JFrame {
      
      
      }
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
      
      
      
@@ -877,21 +827,23 @@ public class GatoApp extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GatoApp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JuegoGato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GatoApp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JuegoGato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GatoApp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JuegoGato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GatoApp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JuegoGato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GatoApp().setVisible(true);
+                new JuegoGato().setVisible(true);
             }
         });
     }
